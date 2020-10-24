@@ -5,3 +5,6 @@ audiodateien
 .ipynb_checkpoints
 .idea
 __pythoncache__
+*.log
+*.mp3
+*.wav
