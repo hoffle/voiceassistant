@@ -1,5 +1,5 @@
 ##
-## Speech System
+## speech output
 ##
 ## Personal Assistent
 ## by Hoffle
@@ -15,5 +15,3 @@ def speak(text):
         os.remove(r'output.mp3')
     tts.save('./output.mp3')
     subprocess.call(['afplay', './output.mp3'])
-
-speak('Hallo')

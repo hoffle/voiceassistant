@@ -1,6 +1,13 @@
+##
+## Input
+##
+## Personal Assistent
+## by Hoffle
+
 import speech_recognition as sr
 
-def myCommand():
+
+def input():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print('ready to listen!')
@@ -10,7 +17,8 @@ def myCommand():
     try:
         command = r.recognize_google(audio, language="de_DE")
         print('Du hast gesagt: ' + command)
+        return command
     except sr.UnknownValueError:
-        print('Etwas ist schief gelaufen!')
-
-    return command
+        input_error = 'Ich habe dich leider nicht verstanden!'
+        print(input_error)
+        return input_error
